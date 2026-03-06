@@ -65,9 +65,19 @@ def changeColor(command, bulb, bulbs):
             action=yeelight.Flow.actions.stay,
             transitions=transitions
         )
-
-        
-
         bulb.start_flow(flow)
+    elif command == "help":
+        print("""
+        help - show this help
+        exit - exit the program
+        off - turn off the bulb
+        on - turn on the bulb
+        purple - set the bulb to purple
+        red - set the bulb to red
+        blue - set the bulb to blue
+        white - set the bulb to white
+        flow - start a flow"""
+        )
+
 
 main()
